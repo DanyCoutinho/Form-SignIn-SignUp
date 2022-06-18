@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    width: 500px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+legend {
+    background-color: aliceblue;
+    color: blue;
+}
+
+fieldset {
+    margin: 10px;
+    padding: 10px;
+    border-color: red;
+}
+
+fieldset#Dados_Pessoais {
+    margin-bottom: 20px;
+}
+
+fieldset#Dados_Profissionais {
+    margin-bottom: 10px;
+}
+/* Se for só label a cor é aplicada na linha onde tem o input */
+label p {
+    background-color: aqua;
+    padding: 2px;
+    font-weight: bolder;
+}
+
+input {
+    margin: 10px 0 10px 10px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+button {
+    margin: 10px;
+    padding: 5px;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: aliceblue;
+}

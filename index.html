@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <!-- enctype="multipart/form-data" usamos quando tem nvio de arquivos -->
+    <form method="post" action="registo.php" enctype="multipart/form-data">
+        <input type="hidden" name="Id" value="Id-unico-para-BD">
+
+        <fieldset id="Dados_Pessoais">
+            <legend>Dados Pessoais</legend>
+            <!--O for da label está ligado ao id do input
+            Aqui optei por não o utilizar!
+            Seria assim:
+            ----------------------------------------------------
+            <label for="firstname"><input type="text" name="firstname" id="firstname" placeholder="Primeiro Nome"></label>
+            ----------------------------------------------------
+            -->
+            <label>
+                <p>Primeiro Nome:</p>
+                <input type="text" name="firstname" placeholder="Primeiro Nome" minlength="2" maxlength="5" required>
+            </label>
+
+            <label>
+                <p>Último Nome:</p>
+                <input type="text" name="lastname" placeholder="Último Nome">
+            </label>
+            <!-- OU accept="application/pdf" -->
+            <label>
+                <input type="file" name="photo" accept="image/*">
+            </label>
+
+            <label>
+                <p>Nome de utilizar:</p>
+                <input type="text" name="UserName" placeholder="Nome de Utilizador" required>
+            </label>
+            <!-- Para usar o pattern estudar EXPRESSÕES REGULARES RegEx -->
+            <label>
+                <p>E-mail:</p>
+                <input type="email" name="email" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" title="endereço de e-mail" required>
+            </label>
+            <!--
+            <p>Idade:</p>
+            <label>
+                <input type="number" name="age" step="3" min="18" max="120">
+            </label>
+            -->
+            <!--
+            <p>Data de nascimento:</p>
+            <label>
+                <input type="date" name="age" min="2021-06-14" max="usando javasript para ter como máximo o dia de hoje" >
+            </label>
+            -->
+            <label>
+                <p>Escolha a sua password:</p>
+                <input type="password" name="Password">
+            </label>
+        </fieldset>
+
+        <fieldset id="Dados_Profissionais">
+            <legend>Dados Profissionais</legend>
+
+            <label for="empresa">
+                <p>Empresa em que trabalha:</p>
+                <input type="text" name="empresa" id="empresa" placeholder="Empresa em que trabalha">
+            </label>
+        </fieldset>
+
+        <button type="submit">
+            <p>Registar</p>
+        </button>
+
+    </form>
+</body>
+</html>
